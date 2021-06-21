@@ -23,14 +23,12 @@ class Chance(Street):
             # Advance to nearest utility
             position = self.index
             while position != StreetNames.ELECTRIC_COMPANY.value | position != StreetNames.WATER_WORKS.value:
-                print(position)
                 position = (position + 1) % 40
             return position
         elif cardDrawn == 9 | cardDrawn == 10:
             # Advance to nearest railroad
             position = self.index
             while position != StreetNames.READING_RAILROAD.value | position != StreetNames.PENNSYLVANIA_RAILROAD.value | position != StreetNames.BO_RAILROAD.value | position != StreetNames.SHORT_LINE_RAILROAD.value:
-                print(position)
                 position = (position + 1) % 40
             return position
         else:
